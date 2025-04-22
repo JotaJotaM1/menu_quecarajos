@@ -1,11 +1,11 @@
-import QRCode from 'qrcode.react';
+import { QRCodeSVG } from 'qrcode.react';  // Cambia esta línea
 
 function QRGenerator() {
     const url = window.location.href; // O la URL específica de tu GitHub Pages
 
     return (
         <div className="qr-container">
-            <QRCode
+            <QRCodeSVG  // Cambia QRCode por QRCodeSVG
                 value={url}
                 size={128}
                 bgColor={"#ffffff"}
