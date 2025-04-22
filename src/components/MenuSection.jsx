@@ -1,3 +1,4 @@
+import '../styles/components/MenuSection.css'
 function MenuSection({ title, items }) {
     return (
         <div className="menu-section">
