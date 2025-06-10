@@ -42,23 +42,23 @@
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: 20px;
     color: white;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-size: 17px;
     color: #e0e0e0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     line-height: 1.6;
 }
 
 .cta-button {
-    background-color: #d32f2f;
+    background-color: #25D366;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -70,14 +70,12 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
     animation: pulse 2s infinite;
 }
 
 .cta-button:hover {
-    background-color: #b71c1c;
+    background-color: #25D366;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
 }
 
 .whatsapp-icon {
@@ -100,59 +98,6 @@
     object-fit: contain;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     animation: float 3s ease-in-out infinite;
-}
-
-/* Animaciones */
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
-    }
-    50% {
-        box-shadow: 0 4px 25px rgba(211, 47, 47, 0.5);
-    }
-    100% {
-        box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
-    }
-}
-
-@keyframes drift {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100px);
-    }
 }
 
 /* Responsive */

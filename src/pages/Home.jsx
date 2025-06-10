@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/pages/Home.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 function Home() {
     const handleWhatsAppClick = () => {
@@ -17,14 +19,13 @@ function Home() {
                     <h1>Las Mejores Hamburguesas de la Ciudad</h1>
                     <p>Ingredientes frescos, sabor inolvidable. Entrega rápida a tu puerta.</p>
                     <button className="cta-button" onClick={handleWhatsAppClick}>
-                        <span className="whatsapp-icon">📱</span>
+                        <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
                         Ordena por WhatsApp
                     </button>
                 </div>
             </div>
-            
+
             <div className="menu-links">
-                <Link to="/home" className="menu-link">home</Link><br></br>
                 <Link to="/hamburguesas" className="menu-link">Hamburguesas</Link><br></br>
                 <Link to="/pizzas" className="menu-link">Pizzas</Link><br></br>
                 <Link to="/aplastados" className="menu-link">Aplastados</Link><br></br>
