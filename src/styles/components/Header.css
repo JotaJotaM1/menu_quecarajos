@@ -76,6 +76,7 @@
 }
 
 .nav-mobile {
+    z-index: 3;
     margin-top: 3px;
     border-radius: 8px;
     position: absolute;
