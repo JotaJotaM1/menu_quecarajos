@@ -26,23 +26,24 @@ function Header() {
 
                     {isMobile && (
                         <button
-                            className="menu-toggle"
+                            className={`menu-toggle ${menuOpen ? 'menu-open' : ''}`}
                             onClick={() => setMenuOpen(!menuOpen)}
                             aria-label="Toggle menu"
                         >
-                            ☰
+                            <span className="hamburger-line"></span>
+                            <span className="hamburger-line"></span>
+                            <span className="hamburger-line"></span>
                         </button>
                     )}
                 </div>
 
-                {(menuOpen || !isMobile) && (
-                    <nav className="nav">
-                        <Link to="/hamburguesas" className="nav-link" onClick={() => setMenuOpen(false)}>Hamburguesas</Link>
-                        <Link to="/pizzas" className="nav-link" onClick={() => setMenuOpen(false)}>Pizzas</Link>
-                        <Link to="/aplastados" className="nav-link" onClick={() => setMenuOpen(false)}>Aplastados</Link>
-                        <Link to="/salchipapas" className="nav-link" onClick={() => setMenuOpen(false)}>Salchipapas</Link>
-                    </nav>
-                )}
+                <nav className={`nav ${isMobile ? 'nav-mobile' : ''} ${menuOpen ? 'nav-open' : ''}`}>
+                    <Link to="/home" className="nav-link" onClick={() => setMenuOpen(false)}>Inicio</Link>
+                    <Link to="/hamburguesas" className="nav-link" onClick={() => setMenuOpen(false)}>Hamburguesas</Link>
+                    <Link to="/pizzas" className="nav-link" onClick={() => setMenuOpen(false)}>Pizzas</Link>
+                    <Link to="/aplastados" className="nav-link" onClick={() => setMenuOpen(false)}>Aplastados</Link>
+                    <Link to="/salchipapas" className="nav-link" onClick={() => setMenuOpen(false)}>Salchipapas</Link>
+                </nav>
             </div>
         </header>
     );
