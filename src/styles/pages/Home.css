@@ -41,7 +41,7 @@
 }
 
 .hero-content h1 {
-    font-size: 20px;
+    font-size: 45px;
     color: white;
     font-weight: 900;
     line-height: 1.1;
@@ -78,7 +78,7 @@
 }
 
 .whatsapp-icon {
-    font-size: 1.3rem;
+    font-size: 2.3rem;
 }
 
 /* Menu Categories Section */
@@ -90,7 +90,7 @@
 
 .menu-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: white;
     margin-bottom: 3rem;
     font-weight: 900;
@@ -175,10 +175,6 @@
         margin-bottom: 2rem;
     }
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
     .hero-content p {
         font-size: 1rem;
     }
@@ -190,11 +186,6 @@
 
     .menu-categories {
         padding: 3rem 1rem;
-    }
-
-    .menu-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
     }
 
     .menu-grid {
