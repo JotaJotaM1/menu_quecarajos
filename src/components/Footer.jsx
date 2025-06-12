@@ -1,9 +1,13 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import '../styles/components/Footer.css'
+import LogoFooter from '../assets/logoQC-NoFondo.png'
 
 function Footer() {
     return (
         <footer className="footer">
+            <div className='cnt-logoFooter'>
+                <img className='LogoFooter' src={LogoFooter} alt='logoFooter'></img>
+            </div>
             <div className="footer-content">
                 <div className="footer-section">
                     <h3>Contacto</h3>

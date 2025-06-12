@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/Header.css'
+import LogoQueCarajos from '../assets/logoQC-NoFondo.png';
 
 function Header() {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -22,7 +23,7 @@ function Header() {
         <header className="header">
             <div className="header-container">
                 <div className="logo-container">
-                    <h1 className="logo">Qué Carajos</h1>
+                    <img src={LogoQueCarajos} className="logo"></img>
 
                     {isMobile && (
                         <button
