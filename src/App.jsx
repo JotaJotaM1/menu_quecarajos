@@ -7,6 +7,7 @@ import Aplastados from './pages/Aplastados';
 import Home from './pages/Home';
 import Salchipapas from './pages/Salchipapas';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/salchipapas" element={<Salchipapas />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
+      <WhatsAppButton /> {/* 👈 Botón flotante aquí */}
       <Footer />
     </Router>
   );
