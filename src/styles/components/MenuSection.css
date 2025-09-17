@@ -2,6 +2,7 @@
 .menu-section {
     margin: 40px 0;
     animation: fadeIn 0.6s ease-out;
+
 }
 
 .section-title {
@@ -24,6 +25,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-item {
@@ -56,6 +60,9 @@
     display: flex;
     justify-content: space-between;
 }
+.nameCard{
+    font-weight: 900;
+}
 
 .item-price {
     color: var(--primary);
@@ -75,6 +82,7 @@
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
+    font-weight: bold;
     margin-right: 8px;
     margin-bottom: 8px;
 }

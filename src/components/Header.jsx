@@ -41,7 +41,7 @@ function Header() {
                 <nav className={`nav ${isMobile ? 'nav-mobile' : ''} ${menuOpen ? 'nav-open' : ''}`}>
                     <Link to="/home" className="nav-link" onClick={() => setMenuOpen(false)}>Inicio</Link>
                     <Link to="/hamburguesas" className="nav-link" onClick={() => setMenuOpen(false)}>Hamburguesas</Link>
-                    <Link to="/pizzas" className="nav-link" onClick={() => setMenuOpen(false)}>Pizzas</Link>
+                    {/* <Link to="/pizzas" className="nav-link" onClick={() => setMenuOpen(false)}>Pizzas</Link> */}
                     <Link to="/aplastados" className="nav-link" onClick={() => setMenuOpen(false)}>Aplastados</Link>
                     <Link to="/salchipapas" className="nav-link" onClick={() => setMenuOpen(false)}>Salchipapas</Link>
                 </nav>

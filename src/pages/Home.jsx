@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 // Importar las imágenes
 import hamburguesaImg from '../assets/hamburguesa.jpg';
-import pizzaImg from '../assets/pizza.jpg';
+// import pizzaImg from '../assets/pizza.jpg';
 import aplastadoImg from '../assets/aplastado.jpg';
 import salchipapaImg from '../assets/salchipapa.jpg';
 
@@ -25,6 +25,7 @@ function Home() {
             image: hamburguesaImg,
             link: '/hamburguesas'
         },
+        /*
         {
             id: 'pizzas',
             name: 'Pizzas',
@@ -32,6 +33,7 @@ function Home() {
             image: pizzaImg,
             link: '/pizzas'
         },
+        */
         {
             id: 'aplastados',
             name: 'Aplastados',
