@@ -1,4 +1,3 @@
-/* Home.css */
 .home-page {
     min-height: 100vh;
 }
@@ -6,12 +5,12 @@
 /* Hero Section */
 .cnt-heroH1 {
     position: relative;
-    background-image: url(../../assets/heroBurger.jpg);
+    background-image: url(images/heroBurger.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
-    min-height: 80vh;
+    min-height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,6 +80,17 @@
     font-size: 2.3rem;
 }
 
+/* Imagen de la hero que aparece solo en pantallas grandes */
+.hero-image {
+    display: none;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    z-index: 2;
+}
+
 /* Menu Categories Section */
 .menu-categories {
     padding: 4rem 5%;
@@ -95,6 +105,13 @@
     margin-bottom: 3rem;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+.menu-description {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 30px;
 }
 
 .menu-grid {
@@ -117,6 +134,11 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.menu-card2 {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .menu-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -128,6 +150,7 @@
     overflow: hidden;
     position: relative;
 }
+
 
 .card-image {
     width: 100%;
@@ -194,8 +217,39 @@
     }
 
     .card-image-container {
-        height: 180px;
+        height: 220px;
     }
+}
+
+/* A partir de 820px quitamos el fondo y mostramos la imagen al lado */
+@media (min-width: 1024px) {
+    .cnt-heroH1 {
+        background: none;
+        justify-content: center;
+        text-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+    .cnt-heroH1::after {
+        display: none;
+    }
+
+    .hero-image {
+        display: block;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero-image {
+        max-width: 600px;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(3, minmax(250px, 2fr));
+    }
+
 }
 
 /* Animations */

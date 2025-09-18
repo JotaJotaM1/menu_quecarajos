@@ -1,11 +1,21 @@
 /* Estilos del Header */
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #2C2C2E;
-    border-radius: 8px;
     color: white;
     padding: 1rem;
+    border-radius: 0 0 8px 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative;
+    transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease, background-color 0.3s ease;
+}
+
+/* Cuando haces scroll */
+.header.is-scrolled {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    backdrop-filter: saturate(120%) blur(6px);
+    background-color: rgba(44, 44, 46, 0.9); /* semi-transparente con blur */
 }
 
 .header-container {
@@ -28,7 +38,7 @@
     width: 50px;
 }
 
-/* Botón hamburguesa mejorado */
+/* Botón hamburguesa */
 .menu-toggle {
     background: none;
     border: none;
@@ -55,7 +65,7 @@
     transform-origin: center;
 }
 
-/* Animación cuando el menú está abierto */
+/* Animación menú hamburguesa */
 .menu-toggle.menu-open .hamburger-line:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -69,7 +79,7 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Navegación móvil mejorada */
+/* Navegación móvil */
 .nav {
     display: flex;
     flex-direction: column;
@@ -98,7 +108,7 @@
     padding: 1rem;
 }
 
-/* Animación stagger para los links */
+/* Links móviles animados */
 .nav-mobile .nav-link {
     opacity: 0;
     transform: translateY(-10px);
@@ -110,26 +120,12 @@
     transform: translateY(0);
 }
 
-/* Delay progresivo para cada link */
-.nav-mobile.nav-open .nav-link:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.nav-mobile.nav-open .nav-link:nth-child(2) {
-    transition-delay: 0.15s;
-}
-
-.nav-mobile.nav-open .nav-link:nth-child(3) {
-    transition-delay: 0.2s;
-}
-
-.nav-mobile.nav-open .nav-link:nth-child(4) {
-    transition-delay: 0.25s;
-}
-
-.nav-mobile.nav-open .nav-link:nth-child(5) {
-    transition-delay: 0.3s;
-}
+/* Delay progresivo */
+.nav-mobile.nav-open .nav-link:nth-child(1) { transition-delay: 0.1s; }
+.nav-mobile.nav-open .nav-link:nth-child(2) { transition-delay: 0.15s; }
+.nav-mobile.nav-open .nav-link:nth-child(3) { transition-delay: 0.2s; }
+.nav-mobile.nav-open .nav-link:nth-child(4) { transition-delay: 0.25s; }
+.nav-mobile.nav-open .nav-link:nth-child(5) { transition-delay: 0.3s; }
 
 .nav-link {
     color: white;

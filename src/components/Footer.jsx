@@ -1,25 +1,31 @@
 import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import '../styles/components/Footer.css'
 import LogoFooter from '../assets/logoQC-NoFondo.png'
 
 function Footer() {
     return (
         <footer className="footer">
-            <div className='cnt-logoFooter'>
-                <img className='LogoFooter' src={LogoFooter} alt='logoFooter'></img>
-            </div>
             <div className="footer-content">
+                <div className='cnt-logoFooter'>
+                    <Link to="/home">
+                        <img
+                            className="LogoFooter"
+                            src={LogoFooter}
+                            alt="logoFooter"
+                        />
+                    </Link>
+                </div>
                 <div className="footer-section">
                     <h3>Contacto</h3>
-                    <p>Dirección: [Tu dirección]</p>
-                    <p>Teléfono: [Tu teléfono]</p>
-                    <p>Email: [Tu email]</p>
+                    <p>Dirección: Cra 43a # 13a - 69 El Guabal</p>
+                    <p>Teléfono: 3169796622</p>
                 </div>
-
                 <div className="footer-section">
                     <h3>Horario</h3>
-                    <p>Lunes a Viernes: 10am - 10pm</p>
-                    <p>Sábado y Domingo: 11am - 11pm</p>
+                    <p>Domingo, Lunes y Miercoles: 5 PM - 11 PM</p>
+                    <p>Martes: Sin servicio</p>
+                    <p>Jueves a Sabado: 5 PM - 1 AM</p>
                 </div>
 
                 <div className="footer-section social-links">

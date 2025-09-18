@@ -31,7 +31,7 @@ function App() {
         <Route path="/salchipapas" element={<Salchipapas />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
-      <WhatsAppButton /> {/* 👈 Botón flotante aquí */}
+      <WhatsAppButton /> 
       <Footer />
     </Router>
   );

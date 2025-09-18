@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
-import '../styles/pages/Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-// Importar las imágenes
-import hamburguesaImg from '../assets/hamburguesa.jpg';
+import hamburguesaImg from '/images/burgerSencilla.png';
 // import pizzaImg from '../assets/pizza.jpg';
-import aplastadoImg from '../assets/aplastado.jpg';
-import salchipapaImg from '../assets/salchipapa.jpg';
+import aplastadoImg from '/images/aplastados3x1.jpg';
+import salchipapaImg from '/images/salchipapaPersonal.jpg';
+import miniBurgerImg from '/images/miniBurger.jpg';
+import '../styles/pages/Home.css'
 
 function Home() {
     const handleWhatsAppClick = () => {
-        // Reemplaza el número con el número de WhatsApp de tu negocio
-        const phoneNumber = '573001234567'; // Ejemplo: código de país + número
+        const phoneNumber = '573169796622';
         const message = 'Hola! Quiero hacer un pedido de Qué Carajos';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
@@ -26,13 +25,13 @@ function Home() {
             link: '/hamburguesas'
         },
         /*
-        {
+            {
             id: 'pizzas',
             name: 'Pizzas',
             description: '🍕 Masa artesanal, ingredientes premium y esa orilla de queso que te va a volver loco',
             image: pizzaImg,
             link: '/pizzas'
-        },
+            },  
         */
         {
             id: 'aplastados',
@@ -50,6 +49,17 @@ function Home() {
         }
     ];
 
+    // NUEVA SECCIÓN: Productos para eventos
+    const eventProducts = [
+        {
+            id: 'mini-hamburguesas',
+            name: 'Mini Hamburguesas',
+            description: 'Cajitas de 6/12 unidades. Pan brioche, carne 100% res y queso. Perfectas para cumpleaños. Preguntanos o escribenos al whatsapp para mayor informacion !',
+            image: miniBurgerImg,
+            link: '/eventos/mini-hamburguesas'
+        }
+    ];
+
     return (
         <div className="home-page">
             <div className='cnt-heroH1'>
@@ -61,23 +71,48 @@ function Home() {
                         Ordena por WhatsApp
                     </button>
                 </div>
+
+                <img
+                    src="images/heroBurger.jpg"
+                    alt="Hamburguesa"
+                    className="hero-image"
+                />
             </div>
 
+            {/* Sección Menú principal */}
             <div className="menu-categories">
                 <h2 className="menu-title">Nuestro Menú</h2>
                 <div className="menu-grid">
                     {menuCategories.map((category) => (
                         <Link to={category.link} key={category.id} className="menu-card">
                             <div className="card-image-container">
-                                <img 
-                                    src={category.image} 
-                                    alt={category.name}
-                                    className="card-image"
-                                />
+                                <img src={category.image} alt={category.name} className="card-image" />
                             </div>
                             <div className="card-content">
                                 <h3 className="card-title">{category.name}</h3>
                                 <p className="card-description">{category.description}</p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+
+            {/* NUEVA SECCIÓN: Eventos & Fiestas Infantiles */}
+            <div className="menu-categories" id="eventos">
+                <h2 className="menu-title">Eventos & Fiestas Infantiles</h2>
+                <p className='menu-description'>
+                    Llevamos el sabor en formato mini ideales para cumpleaños, reuniones y celebraciones.
+                </p>
+
+                <div className="menu-grid">
+                    {eventProducts.map((item) => (
+                        <Link to={item.link} key={item.id} className="menu-card menu-card2">
+                            <div className="card-image-container">
+                                <img src={item.image} alt={item.name} className="card-image" />
+                            </div>
+                            <div className="card-content">
+                                <h3 className="card-title">{item.name}</h3>
+                                <p className="card-description">{item.description}</p>
                             </div>
                         </Link>
                     ))}

@@ -7,12 +7,14 @@
     margin-top: 2rem;
 }
 
-.cnt-logoFooter{
+.cnt-logoFooter {
     display: flex;
     justify-content: center;
     align-self: center;
+    min-width: 200px;
 }
-.LogoFooter{
+
+.LogoFooter {
     width: 160px;
     height: 160px;
 }
@@ -24,13 +26,17 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .footer-section {
+    display: flex;
+    justify-content: center;
     flex: 1;
     min-width: 200px;
     margin-bottom: 1.5rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-section h3 {

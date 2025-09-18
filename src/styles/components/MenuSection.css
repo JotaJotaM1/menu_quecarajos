@@ -1,15 +1,19 @@
-/* MenuSection.css */
+/* MenuSection.css — versión alineada con las cards del Home */
 .menu-section {
-    margin: 40px 0;
+    padding: 4rem 5%;
+    background-color: black;
+    margin: 0;
+    /* quitamos gap vertical extra */
     animation: fadeIn 0.6s ease-out;
-
 }
 
 .section-title {
+    color: #FFD700;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     position: relative;
-    color: var(--dark);
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .section-title::after {
@@ -17,72 +21,134 @@
     display: block;
     width: 80px;
     height: 3px;
-    background-color: var(--primary);
     margin: 10px auto 0;
 }
 
+/* Grid igual al Home */
 .menu-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 1200px;
 }
 
+/* Card base como .menu-card del Home */
 .menu-item {
-    background-color: var(--white);
-    border-radius: 8px;
+    background-color: #2a2a2a;
+    border: 1px solid #2b2b2b;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor e imagen con zoom al hover, como en Home */
+.item-image-wrapper {
+    width: 100%;
+    height: 200px;
+    /* 200px como en Home */
+    overflow: hidden;
+    position: relative;
 }
 
 .item-image {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
+.menu-item:hover .item-image {
+    transform: scale(1.1);
+}
+
+/* Contenido interno */
 .item-content {
-    padding: 20px;
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .item-title {
-    font-size: 1.2rem;
-    color: var(--dark);
-    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
-}
-.nameCard{
-    font-weight: 900;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
 }
 
+/* Título estilo Home */
+.nameCard {
+    color: #FFD700;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Precio alineado y con énfasis */
 .item-price {
-    color: var(--primary);
-    font-weight: 700;
+    color: #FFD700;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
+/* Descripción estilo Home */
 .item-description {
-    color: var(--text);
-    margin-bottom: 15px;
-    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin: 25px 0;
 }
 
+/* Badge/promos */
 .item-badge {
     display: inline-block;
-    background-color: var(--accent);
-    color: var(--white);
-    padding: 3px 10px;
+    background-color: rgb(55, 52, 52);
+    padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    width: fit-content;
+}
+
+/* Responsive: igual que Home */
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 3rem 1rem;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .item-image-wrapper {
+        height: 220px;
+    }
+}
+
+/* Animación ya existente */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

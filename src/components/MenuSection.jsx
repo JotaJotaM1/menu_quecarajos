@@ -7,65 +7,70 @@ function MenuSection({ categoryId }) {
             {
                 nombre: 'De la Casa',
                 precio: '$15.000',
-                descripcion: 'Nuestra especialidad con pan brioche suave, carne 100% de res jugosa, tocineta crujiente, queso fundido, jamón, vegetales frescos, cebolla caramelizada, ripio y bañada en salsa de ajo y nuestra salsa secreta de la casa. ¡Un clásico que conquista a todos!',
-                imagen: 'images/burgerSencilla.png'
+                descripcion: 'Pan brioche, carne de res, tocineta, queso, jamón, lechuga, tomate, cebolla caramelizada, ripio, salsa de ajo y salsa de la casa.',
+                imagen: 'images/burgerSencilla.png',
+                badge: 'Pídela con papas a la francesa por solo $18.000'
             },
             {
                 nombre: 'Doble Carne',
                 precio: '$20.000',
-                descripcion: 'Para los más atrevidos: pan brioche doradito, doble carne 100% de res, tocineta crocante, huevo frito, queso derretido, jamón, vegetales frescos, cebolla caramelizada, ripio y la combinación irresistible de salsa de ajo y salsa de la casa. ¡Una bomba de sabor!',
-                imagen: 'images/habueruesaDoble.jpg'
+                descripcion: 'Pan brioche, doble carne de res, tocineta, huevo frito, queso, jamón, lechuga, tomate, cebolla caramelizada, ripio, salsa de ajo y salsa de la casa.',
+                imagen: 'images/habueruesaDoble.jpg',
+                badge: 'Pídela con papas a la francesa por solo $23.000'
             },
             {
                 nombre: '2 x 1',
                 precio: '$20.000',
-                descripcion: 'La promo que no te puedes perder: ¡dos hamburguesas al precio de una! Cada una con pan brioche suave, carne 100% de res, queso, jamón, vegetales frescos, cebolla caramelizada, ripio y nuestras salsas especiales. Perfectas para compartir o para los más hambrientos.',
+                descripcion: 'Pan brioche, carne de res, queso, jamón, lechuga, tomate, cebolla caramelizada, ripio y salsas de la casa.',
                 imagen: 'images/burger2x1.jpg',
-                badge: 'Promo 2x1'
+                badge: 'Pídelas con papas a la francesa por solo $26.000',
             },
         ],
 
         aplastados: [
             {
-                nombre: 'Aplastado de Jamon Ahumado',
+                nombre: 'Jamón Ahumado',
                 precio: '$7.500',
-                descripcion: 'Pan prensado, jamón ahumado, queso, vegetales frescos, cebolla agridulce, salsas de la casa y ese toque crujiente irresistible. Pidelo en combo por solo $10.000',
-                imagen: 'images/aplastadoAhumado.jpg'
+                descripcion: 'Pan prensado, jamón ahumado, queso, lechuga, tomate, cebolla agridulce, ripio y salsa de ajo.',
+                imagen: 'images/aplastadoAhumado.jpg',
+                badge: 'Pídelo con papas a la francesa por solo $10.000',
             },
             {
-                nombre: 'Aplastado de Pollo',
-                precio: '$9.500',
-                descripcion: 'Pollo rostizado, queso, vegetales frescos y salsa de ajo, todo prensado a la perfección. Pídelo en combo por solo $12.000',
+                nombre: 'Pollo',
+                precio: '$10.000',
+                descripcion: 'Pan prensado, pollo, queso, lechuga, tomate, cebolla agridulce, ripio y salsa de ajo.',
                 imagen: 'images/aplastadoPollo.jpg',
+                badge: 'Pídelo con papas a la francesa por solo $13.000',
             },
             {
-                nombre: 'Promo 3 Aplastados de Jamón Ahumado',
+                nombre: 'Promo 3 x 2',
                 precio: '$20.000',
-                descripcion: 'Aprovecha esta promo especial: 3 aplastados de jamón ahumado con queso derretido, vegetales frescos y salsa de ajo, prensados a la perfección. ¡Ideal para compartir!',
+                descripcion: 'Pan prensado, jamón ahumado, queso, lechuga, tomate, cebolla agridulce, ripio y salsa de ajo.',
                 imagen: 'images/aplastados3x1.jpg',
-                badge: 'Promo 3 x $20.000'
+                badge: 'Pídelos con papas a la francesa por solo $29.000'
             },
         ],
 
         salchipapas: [
             {
-                nombre: 'Salchipapa Personal',
-                precio: '$9.000',
-                descripcion: 'Papas a la francesa crujientes con salchichas, queso rallado, tocineta y nuestras salsas caseras.',
-                imagen: 'images/salchipapaPersonal.jpg'
+                nombre: 'Sencilla',
+                precio: '$8.000',
+                descripcion: 'Papas a la francesa, salchichas, queso, salsas de ajo y de la casa',
+                imagen: 'images/salchipapaSencilla.jpg',
             },
             {
-                nombre: 'Salchipapa Doble',
-                precio: '$13.000',
-                descripcion: 'Una porción generosa con el doble de papas, salchichas, queso fundido, tocineta y salsas especiales.',
-                imagen: 'images/salchipapaDoble.jpg'
+                nombre: 'Personal',
+                precio: '$15.000',
+                descripcion: 'Papas a la francesa, salchichas, queso, proteina a tu eleccion, salsas de ajo y de la casa',
+                imagen: 'images/salchipapaPersonal.jpg',
+                badge: 'Proteinas: Carne de hamburguesa, pollo o tocineta'
             },
             {
-                nombre: 'Salchipapa Especial',
-                precio: '$16.000',
-                descripcion: 'Papas con salchichas, pollo desmechado, queso doble, tocineta, maíz y una mezcla de nuestras mejores salsas.',
-                imagen: 'images/salchipapaEspecial.jpg',
-                badge: 'La más pedida'
+                nombre: 'Doble',
+                precio: '$25.000',
+                descripcion: 'Papas a la francesa, salchichas, queso, proteina a tu eleccion, salsas de ajo y de la casa',
+                imagen: 'images/salchipapaDoble.jpg',
+                badge: 'Proteinas: Carne de hamburguesa, pollo o tocineta'
             },
         ]
     };
