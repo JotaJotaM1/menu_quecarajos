@@ -20,7 +20,7 @@ function Home() {
         {
             id: 'hamburguesas',
             name: 'Hamburguesas',
-            description: '🔥 Smash burgers con carne jugosa, queso derretido y el toque secreto que las hace irresistibles',
+            description: 'Smash burgers con carne jugosa, queso derretido y el toque secreto que las hace irresistibles',
             image: hamburguesaImg,
             link: '/hamburguesas'
         },
@@ -28,7 +28,7 @@ function Home() {
             {
             id: 'pizzas',
             name: 'Pizzas',
-            description: '🍕 Masa artesanal, ingredientes premium y esa orilla de queso que te va a volver loco',
+            description: 'Masa artesanal, ingredientes premium y esa orilla de queso que te va a volver loco',
             image: pizzaImg,
             link: '/pizzas'
             },  
@@ -36,14 +36,14 @@ function Home() {
         {
             id: 'aplastados',
             name: 'Aplastados',
-            description: '🥪 Crujientes por fuera, explosión de sabor por dentro. ¡Una experiencia que tienes que probar!',
+            description: 'Crujientes por fuera, explosión de sabor por dentro. ¡Una experiencia que tienes que probar!',
             image: aplastadoImg,
             link: '/aplastados'
         },
         {
             id: 'salchipapas',
             name: 'Salchipapas',
-            description: '🍟 Las más cargadas de Cali. Papas crujientes, salsas caseras y ese toque que solo nosotros sabemos darle',
+            description: 'Las más cargadas de Cali. Papas crujientes, salsas caseras y ese toque que solo nosotros sabemos darle',
             image: salchipapaImg,
             link: '/salchipapas'
         }
