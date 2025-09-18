@@ -2,9 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png+xml" href="/iconBurger.png" />
+    <link rel="icon" type="image/png" href="/iconBurger.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>¡Qué carajos!</title>
+
+    <!-- Redirección para GH Pages (antes del bundle) -->
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirect = params.get('redirect');
+        if (redirect) {
+          var newUrl = window.location.origin + '/menu_quecarajos' + redirect;
+          window.history.replaceState(null, '', newUrl);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
