@@ -1,36 +1,36 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/Header.css';
 import LogoQueCarajos from '../assets/logoQC-NoFondo.png';
 
+const MOBILE_BREAKPOINT = 768;
+const SCROLL_OFFSET = 8;
+
 function Header() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_BREAKPOINT);
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
+    const handleResize = useCallback(() => {
+        setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+        if (window.innerWidth >= MOBILE_BREAKPOINT) {
+            setMenuOpen(false);
+        }
+    }, []);
+
+    const handleScroll = useCallback(() => {
+        setScrolled(window.scrollY > SCROLL_OFFSET);
+    }, []);
+
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-            if (window.innerWidth >= 768) {
-                setMenuOpen(false);
-            }
-        };
-
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 8);
-        };
-
         window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
-
-        // Ejecutar una vez al montar para inicializar estado
-        handleScroll();
 
         return () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [handleResize, handleScroll]);
 
     return (
         <header className={`header ${scrolled ? 'is-scrolled' : ''}`}>
@@ -48,7 +48,8 @@ function Header() {
                         <button
                             className={`menu-toggle ${menuOpen ? 'menu-open' : ''}`}
                             onClick={() => setMenuOpen(!menuOpen)}
-                            aria-label="Toggle menu"
+                            aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                            aria-expanded={menuOpen}
                         >
                             <span className="hamburger-line"></span>
                             <span className="hamburger-line"></span>

@@ -1,7 +1,8 @@
 /* Estilos del Footer */
 .footer {
+    border: 1px solid #444;
     border-radius: 8px;
-    background-color: #2C2C2E;
+    background-color: black;
     color: white;
     padding: 2rem 0;
     margin-top: 2rem;
