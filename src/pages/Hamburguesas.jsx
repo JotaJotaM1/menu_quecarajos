@@ -1,7 +1,11 @@
-import MenuSection from '../components/MenuSection';
+import MenuSection from "../components/MenuSection";
 
 function Hamburguesas() {
-  return <MenuSection categoryId="hamburguesas" />;
+  return (
+    <main>
+      <MenuSection categoryId="hamburguesas" />;
+    </main>
+  );
 }
 
-export default Hamburguesas; // 👈 ESTA LÍNEA ES LA QUE FALTABA
+export default Hamburguesas;

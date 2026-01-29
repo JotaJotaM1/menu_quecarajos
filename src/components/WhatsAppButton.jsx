@@ -1,11 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import '../styles/components/WhatsAppButton.css';
+import { PHONE_NUMBER, WHATSAPP_MESSAGE } from '../config';
 
 function WhatsAppButton() {
-    const phoneNumber = '34672714540'; // Reemplaza con tu número (código de país + número)
-    const message = 'Hola! Quiero hacer un pedido de Qué Carajos';
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
     return (
         <a 

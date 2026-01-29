@@ -1,12 +1,49 @@
-# React + Vite
+# Qué Carajos — Menú web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pequeña SPA en React + Vite para mostrar el menú de "Qué Carajos". Pensada para dispositivos móviles y escritorio, con integración de WhatsApp y generación de QR.
 
-Currently, two official plugins are available:
+Características
+- React 19 + Vite
+- Enrutado con `react-router-dom`
+- Componentes en `src/components/` y estilos en `src/styles/`
+- Imágenes públicas en `public/images/` accesibles desde `/images/...`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instalación y uso
 
-## Expanding the ESLint configuration
+```bash
+npm install
+npm run dev 
+npm run build  
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Despliegue
+- Despliegue en Vercel: conecta tu repositorio a Vercel y deja que detecte el proyecto (Vercel autodetecta Vite).
+
+	Opcionalmente, asegúrate de que los valores sean:
+
+	- Build Command: `npm run build`
+	- Output Directory: `dist`
+
+	Vercel sirve correctamente aplicaciones SPA; si necesitas reglas de rewrites/redirects, añade un archivo `vercel.json` en la raíz.
+
+Nota: no es necesario usar `gh-pages` ni el campo `homepage` en `package.json` cuando despliegas en Vercel.
+
+Notas y recomendaciones
+- Centraliza constantes como el número de WhatsApp en `src/config.js` antes del despliegue.
+- Reemplaza enlaces de redes sociales en `src/components/Footer.jsx`.
+- Los recursos estáticos (imágenes) deben colocarse en `public/images/` y referenciarse como `/images/nombre.jpg`.
+
+Estructura importante
+- `src/components/` — Componentes reutilizables (Header, Footer, MenuSection, QRGenerator...)
+- `src/pages/` — Páginas (Home, Hamburguesas, Aplastados, Salchipapas)
+- `public/images/` — Imágenes públicas consumidas por la app
+
+Mejoras sugeridas
+- Mover los datos de productos a `src/data/products.js` para facilitar mantenimiento
+- Crear `src/config.js` para variables (teléfono WhatsApp, redes, base URL)
+- Añadir CI (tests y lint) antes de deploy automático
+
+Contacto
+- Repo: https://github.com/JotaJotaM1/menu_quecarajos
+

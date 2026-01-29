@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { PHONE_NUMBER, WHATSAPP_MESSAGE } from '../config';
 import hamburguesaImg from '/images/burgerSencilla.png';
 // import pizzaImg from '../assets/pizza.jpg';
 import aplastadoImg from '/images/aplastados3x1.jpg';
@@ -10,9 +11,7 @@ import '../styles/pages/Home.css'
 
 function Home() {
     const handleWhatsAppClick = () => {
-        const phoneNumber = '34672714540';
-        const message = 'Hola! Quiero hacer un pedido de Qué Carajos';
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
         window.open(whatsappUrl, '_blank');
     };
 
@@ -61,7 +60,7 @@ function Home() {
     ];
 
     return (
-        <div className="home-page">
+        <main className="home-page">
             <div className='cnt-heroH1'>
                 <div className="hero-content">
                     <h1>Las Mejores Hamburguesas de la Ciudad</h1>
@@ -118,7 +117,7 @@ function Home() {
                     ))}
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 
