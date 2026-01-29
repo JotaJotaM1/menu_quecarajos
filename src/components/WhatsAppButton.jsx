@@ -3,7 +3,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import '../styles/components/WhatsAppButton.css';
 
 function WhatsAppButton() {
-    const phoneNumber = '573169796622'; // Reemplaza con tu número (código de país + número)
+    const phoneNumber = '34672714540'; // Reemplaza con tu número (código de país + número)
     const message = 'Hola! Quiero hacer un pedido de Qué Carajos';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

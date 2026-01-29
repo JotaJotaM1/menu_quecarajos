@@ -10,7 +10,7 @@ import '../styles/pages/Home.css'
 
 function Home() {
     const handleWhatsAppClick = () => {
-        const phoneNumber = '573169796622';
+        const phoneNumber = '34672714540';
         const message = 'Hola! Quiero hacer un pedido de Qué Carajos';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
