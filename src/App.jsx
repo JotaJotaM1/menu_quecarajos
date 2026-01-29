@@ -19,22 +19,22 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router basename="/menu_quecarajos">
+    <Router>
       <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
         <Route path="/hamburguesas" element={<Hamburguesas />} />
-        {/* <Route path="/pizzas" element={<Pizzas />} /> */}
         <Route path="/aplastados" element={<Aplastados />} />
         <Route path="/salchipapas" element={<Salchipapas />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
-      <WhatsAppButton /> 
+      <WhatsAppButton />
       <Footer />
     </Router>
   );
 }
+
 
 export default App;
